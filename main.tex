@@ -1,0 +1,93 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%2345678901234567890123456789012345678901234567890123456789012345678901234567890
+%        1         2         3         4         5         6         7         8
+
+\documentclass[letterpaper, 10 pt, conference]{ieeeconf}  % Comment this line out
+                                                          % if you need a4paper
+%\documentclass[a4paper, 10pt, conference]{ieeeconf}      % Use this line for a4
+                                                          % paper
+
+\IEEEoverridecommandlockouts                              % This command is only
+                                                          % needed if you want to
+                                                          % use the \thanks command
+\overrideIEEEmargins
+% See the \addtolength command later in the file to balance the column lengths
+% on the last page of the document
+
+
+
+% The following packages can be found on http:\\www.ctan.org
+%\usepackage{graphics} % for pdf, bitmapped graphics files
+%\usepackage{epsfig} % for postscript graphics files
+%\usepackage{mathptmx} % assumes new font selection scheme installed
+%\usepackage{times} % assumes new font selection scheme installed
+%\usepackage{amsmath} % assumes amsmath package installed
+%\usepackage{amssymb}  % assumes amsmath package installed
+
+\title{\LARGE \bf
+Data Annotation for Added Value Database in Structural Biology 
+}
+
+%\author{ \parbox{3 in}{\centering Tomas Kulhanek*
+%         \thanks{*Use the $\backslash$thanks command to put information here}\\
+%         STFC
+%         {\tt\small tomas.kulhanek@matfyz.cz}}
+%         \hspace*{ 0.5 in}
+%         \parbox{3 in}{ \centering Yan Le Franc**
+%         \thanks{**The footnote marks may be inserted manually}\\
+%        Department of Electrical Engineering \\
+%         Wright State University\\
+%         Dayton, OH 45435, USA\\
+%         {\tt\small pmisra@cs.wright.edu}}
+%}
+
+\author{Tomas Kulhanek$^{1}$ and Yan Le Franc$^{2}$% <-this % stops a space
+\thanks{*This work was not supported by any organization}% <-this % stops a space
+\thanks{$^{1}$T. Kulhanek is with STFC
+        {\tt\small tomas.kulhanek at matfyz.cz}}%
+\thanks{$^{2}$Y. Le Franc is with e-Science Data Factory
+        {\tt\small y.lefranc at esciencedatafactory.org}}%
+}
+
+
+\begin{document}
+
+
+
+\maketitle
+\thispagestyle{empty}
+\pagestyle{empty}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{abstract}
+
+This paper describes use case worklfow to extract, manage and store metadata from raw data produced by common methods used in structural biology. As general archive promotes rapid and straightforward data submission, a value-added database requires curated, fine grained metadata. We present the use case of using semantic annotation service B2NOTE with a published sample X-Ray crystallography dataset.
+\end{abstract}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{INTRODUCTION}
+
+There are several methods for metadata extraction. First is to extract headers from known data format. second is to guess possible metadata or use generic metadata from file system, file name, creation date, size. However there is lack of library to support generic application.
+This contribution summarizes some of the existing methods and introduces new library which makes extracting metadata easier.
+
+\section{METHODS}
+
+First version of metadata extractor is implemented in Java as set of classes able to be integrated into any Java based application. 
+After metadata are extracted a template to submit into annotating service is made.
+
+\section{RESULTS}
+
+Source code is available at github. Live service is at [some github.io web page]
+
+
+
+
+\begin{thebibliography}{99}
+
+%\bibitem{c1} G. O. Young, ÒSynthetic structure of industrial plastics (Book style with paper title and editor),Ó 	in Plastics, 2nd ed. vol. 3, J. Peters, Ed.  New York: McGraw-Hill, 1964, pp. 15Ð64.
+\bibitem{c1} Ellenberg, J., Swedlow, J. R., Barlow, M., Cook, C. E., Sarkans, U., Patwardhan, A., … Birney, E. (2018). A call for public archives for biological image data. Nature Methods, 15(11), 849–854. http://doi.org/10.1038/s41592-018-0195-8
+\end{thebibliography}
+
+\end{document}
